@@ -1,0 +1,6 @@
+framework module Pods_EveryDayTask {
+  umbrella header "Pods-EveryDayTask-umbrella.h"
+
+  export *
+  module * { export * }
+}

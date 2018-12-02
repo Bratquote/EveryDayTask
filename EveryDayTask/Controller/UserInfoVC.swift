@@ -32,10 +32,11 @@ class UserInfoVC: UIViewController {
     }
     
     @IBAction func friendsButton(_ sender: Any) {
-        
+        print("Tapped friendsButton")
     }
     
     @IBAction func completedTasksButton(_ sender: Any) {
+        print("Tapped CompletedTasksButton")
     }
     
     
