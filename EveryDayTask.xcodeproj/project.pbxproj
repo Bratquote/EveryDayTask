@@ -22,6 +22,7 @@
 		9E7B05CA21B415220084430B /* TaskInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7B05C921B415220084430B /* TaskInfo.swift */; };
 		9E7B05CC21B4211B0084430B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7B05CB21B4211B0084430B /* LoginVC.swift */; };
 		9E7B05CF21B456780084430B /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7B05CE21B456780084430B /* RegistrationVC.swift */; };
+		9EA45AC321B5AA610044202C /* ApplicationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA45AC221B5AA610044202C /* ApplicationInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		9E7B05C921B415220084430B /* TaskInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskInfo.swift; sourceTree = "<group>"; };
 		9E7B05CB21B4211B0084430B /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		9E7B05CE21B456780084430B /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
+		9EA45AC221B5AA610044202C /* ApplicationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationInfo.swift; sourceTree = "<group>"; };
 		C4837E83FE8FFCFBF53B374E /* Pods-EveryDayTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryDayTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EveryDayTask/Pods-EveryDayTask.debug.xcconfig"; sourceTree = "<group>"; };
 		E252AA374E0BE6448624A85E /* Pods_EveryDayTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EveryDayTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -136,6 +138,7 @@
 			children = (
 				9E7B05C721B4150D0084430B /* UserInfo.swift */,
 				9E7B05C921B415220084430B /* TaskInfo.swift */,
+				9EA45AC221B5AA610044202C /* ApplicationInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,10 +226,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-EveryDayTask/Pods-EveryDayTask-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +272,7 @@
 				9E7B05CC21B4211B0084430B /* LoginVC.swift in Sources */,
 				9E7B05C821B4150D0084430B /* UserInfo.swift in Sources */,
 				9E7B05A821B40ABF0084430B /* AppDelegate.swift in Sources */,
+				9EA45AC321B5AA610044202C /* ApplicationInfo.swift in Sources */,
 				9E7B05C421B414480084430B /* NewTaskVC.swift in Sources */,
 				9E7B05CA21B415220084430B /* TaskInfo.swift in Sources */,
 				9E7B05C221B414390084430B /* UserInfoVC.swift in Sources */,

@@ -10,19 +10,36 @@ import UIKit
 
 class LoginVC: UIViewController {
 
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        ApplicationInfo.user?.name = "Timur"
+        ApplicationInfo.user?.surname = "Karimov"
+        ApplicationInfo.user?.email = "bratquote@gmail.com"
+        ApplicationInfo.user?.password = "Newkek"
         
         // Do any additional setup after loading the view.
     }
     
     @IBAction func loginButton(_ sender: Any) {
-        performSegue(withIdentifier: "Login", sender: nil)
+        if emailTextField.text == ApplicationInfo.user?.email &&
+            passwordTextField.text == ApplicationInfo.user?.password {
+            performSegue(withIdentifier: "Login", sender: nil)
+        } else {
+            let ac = UIAlertController(title: "Error", message: "Your e-mail or password are incorrect", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            present(ac,animated: true)
+        }
+        
     }
     
     @IBAction func registrationButton(_ sender: Any) {
     }
+    
+    @IBAction func unwindToVC1(segue:UIStoryboardSegue) { }
     /*
     // MARK: - Navigation
 

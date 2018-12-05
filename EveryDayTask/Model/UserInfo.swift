@@ -10,5 +10,19 @@ import Foundation
 
 
 struct UserInfo {
+    var name: String
+    var surname: String
+    var email: String
+    var phoneNumber: String?
+    var avatar: Data?
+    var password: String //only for test, later must me removed
     
+    
+//    func registration(name: String, surname: String, email: String, password: String) -> UserInfo {
+//        var user: UserInfo = UserInfo(name: <#String#>, surname: <#String#>, email: <#String#>)
+//    user.name = name
+//    user.surname = surname
+//    user.email = email
+//    user.password = password
+//    }
 }

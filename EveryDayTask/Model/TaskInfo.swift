@@ -10,5 +10,8 @@ import Foundation
 
 
 struct TaskInfo {
-    
+    var name: String
+    var reason: String
+    var friend: String
+    var id: Int
 }
