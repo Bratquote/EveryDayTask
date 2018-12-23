@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2C0FF495971AA686815AAC9E /* Pods_EveryDayTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E252AA374E0BE6448624A85E /* Pods_EveryDayTask.framework */; };
+		9E2E393321C1598D00F9F609 /* UserInfoREST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2E393221C1598D00F9F609 /* UserInfoREST.swift */; };
+		9E2E393521C15E7A00F9F609 /* PostRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2E393421C15E7A00F9F609 /* PostRequests.swift */; };
+		9E2E393C21C2A3FA00F9F609 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2E393B21C2A3FA00F9F609 /* TestVC.swift */; };
+		9E2E393E21C2A70700F9F609 /* GetRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2E393D21C2A70700F9F609 /* GetRequests.swift */; };
+		9E2E394021C2CB9200F9F609 /* Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2E393F21C2CB9200F9F609 /* Id.swift */; };
 		9E7B05A821B40ABF0084430B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7B05A721B40ABF0084430B /* AppDelegate.swift */; };
 		9E7B05AA21B40ABF0084430B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7B05A921B40ABF0084430B /* ViewController.swift */; };
 		9E7B05AD21B40ABF0084430B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E7B05AB21B40ABF0084430B /* Main.storyboard */; };
@@ -23,10 +28,21 @@
 		9E7B05CC21B4211B0084430B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7B05CB21B4211B0084430B /* LoginVC.swift */; };
 		9E7B05CF21B456780084430B /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7B05CE21B456780084430B /* RegistrationVC.swift */; };
 		9EA45AC321B5AA610044202C /* ApplicationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA45AC221B5AA610044202C /* ApplicationInfo.swift */; };
+		9EA45AC721B9248D0044202C /* TextFieldPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA45AC621B9248D0044202C /* TextFieldPresenter.swift */; };
+		9EA45ACB21B92B920044202C /* DifficultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA45ACA21B92B920044202C /* DifficultType.swift */; };
+		9EA45ACD21B92D4E0044202C /* UserDefaultsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA45ACC21B92D4E0044202C /* UserDefaultsPresenter.swift */; };
+		9EA45ACF21B934260044202C /* UserDefaultsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA45ACE21B934260044202C /* UserDefaultsEnum.swift */; };
+		9EA45AD121B962F40044202C /* UserAuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA45AD021B962F40044202C /* UserAuthPresenter.swift */; };
+		9EA45AD321B963AD0044202C /* UserDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA45AD221B963AD0044202C /* UserDataProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		25B465D175A52F3CE1E13A1D /* Pods-EveryDayTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryDayTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-EveryDayTask/Pods-EveryDayTask.release.xcconfig"; sourceTree = "<group>"; };
+		9E2E393221C1598D00F9F609 /* UserInfoREST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoREST.swift; sourceTree = "<group>"; };
+		9E2E393421C15E7A00F9F609 /* PostRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequests.swift; sourceTree = "<group>"; };
+		9E2E393B21C2A3FA00F9F609 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
+		9E2E393D21C2A70700F9F609 /* GetRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRequests.swift; sourceTree = "<group>"; };
+		9E2E393F21C2CB9200F9F609 /* Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Id.swift; sourceTree = "<group>"; };
 		9E7B05A421B40ABF0084430B /* EveryDayTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EveryDayTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E7B05A721B40ABF0084430B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E7B05A921B40ABF0084430B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +60,12 @@
 		9E7B05CB21B4211B0084430B /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		9E7B05CE21B456780084430B /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 		9EA45AC221B5AA610044202C /* ApplicationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationInfo.swift; sourceTree = "<group>"; };
+		9EA45AC621B9248D0044202C /* TextFieldPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldPresenter.swift; sourceTree = "<group>"; };
+		9EA45ACA21B92B920044202C /* DifficultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultType.swift; sourceTree = "<group>"; };
+		9EA45ACC21B92D4E0044202C /* UserDefaultsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsPresenter.swift; sourceTree = "<group>"; };
+		9EA45ACE21B934260044202C /* UserDefaultsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsEnum.swift; sourceTree = "<group>"; };
+		9EA45AD021B962F40044202C /* UserAuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthPresenter.swift; sourceTree = "<group>"; };
+		9EA45AD221B963AD0044202C /* UserDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataProtocol.swift; sourceTree = "<group>"; };
 		C4837E83FE8FFCFBF53B374E /* Pods-EveryDayTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryDayTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EveryDayTask/Pods-EveryDayTask.debug.xcconfig"; sourceTree = "<group>"; };
 		E252AA374E0BE6448624A85E /* Pods_EveryDayTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EveryDayTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -77,6 +99,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9E2E393621C16BF300F9F609 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		9E2E393721C16BFD00F9F609 /* REST */ = {
+			isa = PBXGroup;
+			children = (
+				9E2E393221C1598D00F9F609 /* UserInfoREST.swift */,
+				9E2E393421C15E7A00F9F609 /* PostRequests.swift */,
+				9E2E393D21C2A70700F9F609 /* GetRequests.swift */,
+			);
+			path = REST;
+			sourceTree = "<group>";
+		};
+		9E2E393821C16C1000F9F609 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				9EA45ACC21B92D4E0044202C /* UserDefaultsPresenter.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
 		9E7B059B21B40ABF0084430B = {
 			isa = PBXGroup;
 			children = (
@@ -99,8 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				9E7B05C021B414120084430B /* Model */,
-				9E7B05BF21B414060084430B /* Controller */,
-				9E7B05BE21B414000084430B /* View */,
+				9E7B05BF21B414060084430B /* View */,
+				9E7B05BE21B414000084430B /* Presenter */,
 				9E7B05A721B40ABF0084430B /* AppDelegate.swift */,
 				9E7B05A921B40ABF0084430B /* ViewController.swift */,
 				9E7B05AB21B40ABF0084430B /* Main.storyboard */,
@@ -112,24 +159,31 @@
 			path = EveryDayTask;
 			sourceTree = "<group>";
 		};
-		9E7B05BE21B414000084430B /* View */ = {
+		9E7B05BE21B414000084430B /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				9E2E393821C16C1000F9F609 /* UserDefaults */,
+				9E2E393721C16BFD00F9F609 /* REST */,
+				9E2E393621C16BF300F9F609 /* JSON */,
+				9EA45AC621B9248D0044202C /* TextFieldPresenter.swift */,
+				9EA45AD021B962F40044202C /* UserAuthPresenter.swift */,
+				9EA45AD221B963AD0044202C /* UserDataProtocol.swift */,
 			);
-			path = View;
+			path = Presenter;
 			sourceTree = "<group>";
 		};
-		9E7B05BF21B414060084430B /* Controller */ = {
+		9E7B05BF21B414060084430B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9E7B05CD21B4565F0084430B /* New Group */,
 				9E7B05BC21B40E9A0084430B /* MainVC.swift */,
 				9E7B05C121B414390084430B /* UserInfoVC.swift */,
 				9E7B05C321B414480084430B /* NewTaskVC.swift */,
 				9E7B05C521B4145C0084430B /* TaskInfoVC.swift */,
 				9E7B05CB21B4211B0084430B /* LoginVC.swift */,
 				9E7B05CE21B456780084430B /* RegistrationVC.swift */,
+				9E2E393B21C2A3FA00F9F609 /* TestVC.swift */,
 			);
+			name = View;
 			path = Controller;
 			sourceTree = "<group>";
 		};
@@ -139,15 +193,11 @@
 				9E7B05C721B4150D0084430B /* UserInfo.swift */,
 				9E7B05C921B415220084430B /* TaskInfo.swift */,
 				9EA45AC221B5AA610044202C /* ApplicationInfo.swift */,
+				9EA45ACA21B92B920044202C /* DifficultType.swift */,
+				9EA45ACE21B934260044202C /* UserDefaultsEnum.swift */,
+				9E2E393F21C2CB9200F9F609 /* Id.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		9E7B05CD21B4565F0084430B /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,12 +316,23 @@
 			files = (
 				9E7B05C621B4145C0084430B /* TaskInfoVC.swift in Sources */,
 				9E7B05CF21B456780084430B /* RegistrationVC.swift in Sources */,
+				9E2E393E21C2A70700F9F609 /* GetRequests.swift in Sources */,
+				9EA45AC721B9248D0044202C /* TextFieldPresenter.swift in Sources */,
 				9E7B05AA21B40ABF0084430B /* ViewController.swift in Sources */,
+				9E2E394021C2CB9200F9F609 /* Id.swift in Sources */,
 				9E7B05BD21B40E9A0084430B /* MainVC.swift in Sources */,
+				9EA45AD121B962F40044202C /* UserAuthPresenter.swift in Sources */,
+				9E2E393321C1598D00F9F609 /* UserInfoREST.swift in Sources */,
+				9E2E393521C15E7A00F9F609 /* PostRequests.swift in Sources */,
 				9E7B05B021B40ABF0084430B /* EveryDayTask.xcdatamodeld in Sources */,
+				9EA45ACB21B92B920044202C /* DifficultType.swift in Sources */,
 				9E7B05CC21B4211B0084430B /* LoginVC.swift in Sources */,
+				9EA45ACD21B92D4E0044202C /* UserDefaultsPresenter.swift in Sources */,
 				9E7B05C821B4150D0084430B /* UserInfo.swift in Sources */,
+				9E2E393C21C2A3FA00F9F609 /* TestVC.swift in Sources */,
 				9E7B05A821B40ABF0084430B /* AppDelegate.swift in Sources */,
+				9EA45ACF21B934260044202C /* UserDefaultsEnum.swift in Sources */,
+				9EA45AD321B963AD0044202C /* UserDataProtocol.swift in Sources */,
 				9EA45AC321B5AA610044202C /* ApplicationInfo.swift in Sources */,
 				9E7B05C421B414480084430B /* NewTaskVC.swift in Sources */,
 				9E7B05CA21B415220084430B /* TaskInfo.swift in Sources */,

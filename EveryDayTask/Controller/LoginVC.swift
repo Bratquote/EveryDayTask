@@ -12,21 +12,26 @@ class LoginVC: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    var postRequests: PostRequests!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //print(postRequests.getResponse())
+        //if UserDefaultsPresenter.getBool(withKey: UserDefaultsEnum.isLogin.rawValue) ?? false{
+            print(UserDefaultsPresenter.getBool(withKey: UserDefaultsEnum.isLogin.rawValue) ?? false)
         
-        ApplicationInfo.user?.name = "Timur"
-        ApplicationInfo.user?.surname = "Karimov"
-        ApplicationInfo.user?.email = "bratquote@gmail.com"
-        ApplicationInfo.user?.password = "Newkek"
+        //}
+        
         
         // Do any additional setup after loading the view.
     }
     
+    
     @IBAction func loginButton(_ sender: Any) {
-        if emailTextField.text == ApplicationInfo.user?.email &&
-            passwordTextField.text == ApplicationInfo.user?.password {
+        if emailTextField.text?.lowercased() == UserDefaultsPresenter.getString(withKey: UserDefaultsEnum.email.rawValue) &&
+            passwordTextField.text == UserDefaultsPresenter.getString(withKey: UserDefaultsEnum.password.rawValue) {
             performSegue(withIdentifier: "Login", sender: nil)
         } else {
             let ac = UIAlertController(title: "Error", message: "Your e-mail or password are incorrect", preferredStyle: .alert)

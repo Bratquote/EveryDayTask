@@ -23,33 +23,35 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var constraintContentHeight: NSLayoutConstraint!
     
+    var postRequests: PostRequests!
     var activeField: UITextField?
+    var usrDef: UserDefaultsPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        postRequests = PostRequests()
+        usrDef = UserDefaultsPresenter()
+        
+        setDelegates()
+        self.hideKeyboardTappedAround()
+        
+    }
+    
+    
+    func setDelegates() {
         nameTextField.delegate = self
         surnameTextField.delegate = self
         emailTextField.delegate = self
         passwordTextField.delegate = self
         password2TextField.delegate = self
         
-        self.hideKeyboardTappedAround()
-        
     }
-    
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         
         return true
     }
     
-    func isValidEmail(testStr:String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluate(with: testStr)
-    }
     
     func isTextFieldsAreCorrect() -> Bool {
         var result = false
@@ -57,33 +59,45 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
             surnameTextField.text != "" &&
             passwordTextField.text != "" &&
             passwordTextField.text == password2TextField.text &&
-            isValidEmail(testStr: emailTextField.text!) {
+            TextFieldPresenter.isValidEmail(testStr: emailTextField.text!) {
             result = true
         }
         return result
     }
     
+    
+    func setUpUserDefaults() {
+        UserDefaultsPresenter.setString(value: nameTextField.text, forKey: UserDefaultsEnum.name.rawValue)
+        UserDefaultsPresenter.setString(value: surnameTextField.text, forKey: UserDefaultsEnum.surname.rawValue)
+        UserDefaultsPresenter.setString(value: emailTextField.text?.lowercased(), forKey: UserDefaultsEnum.email.rawValue)
+        UserDefaultsPresenter.setString(value: passwordTextField.text, forKey: UserDefaultsEnum.password.rawValue)
+        UserDefaultsPresenter.setBool(value: true, forKey: UserDefaultsEnum.isLogin.rawValue)
+    }
     @IBAction func toRegisterButton(_ sender: Any) {
         if isTextFieldsAreCorrect() {
             toRegisterButtonOutlet.titleLabel?.text = "Good"
-            ApplicationInfo.user = UserInfo(
+            var newUser = UserInfo(
                 name: nameTextField.text!,
                 surname: surnameTextField.text!,
                 email: emailTextField.text!,
                 phoneNumber: nil,
-                avatar: nil,
                 password: passwordTextField.text!)
+            
+            ApplicationInfo.user = newUser
+            postRequests.createUser(user: newUser)
+            //postRequests.create(url: UserInfoREST.create(user: newUser ))
+            setUpUserDefaults()
             
             let ac = UIAlertController(title: "Registration complete!", message: "Now lets login in our service", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "Go", style: .default, handler: backToLogin))
             present(ac, animated: true)
-            
             
         } else {
             toRegisterButtonOutlet.titleLabel?.text = "Bad"
             
         }
     }
+    
     
     @IBAction func cancelButton(_ sender: Any) {
         performSegue(withIdentifier: "BackToLogin", sender: nil)

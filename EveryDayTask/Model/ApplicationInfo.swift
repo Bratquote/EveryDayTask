@@ -12,4 +12,5 @@ import Foundation
 class ApplicationInfo {
     static var user:UserInfo?
     static var taskList:[TaskInfo]?
+    static var userId: Int! = 0
 }

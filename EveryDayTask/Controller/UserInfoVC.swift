@@ -18,8 +18,8 @@ class UserInfoVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareImage()
-        userName.text = "\(ApplicationInfo.user!.name) \(ApplicationInfo.user!.surname)"
-        userEmail.text = ApplicationInfo.user!.email
+        userName.text = "\(UserDefaultsPresenter.getString(withKey: UserDefaultsEnum.name.rawValue)!) \(UserDefaultsPresenter.getString(withKey: UserDefaultsEnum.surname.rawValue)!)"
+        userEmail.text = UserDefaultsPresenter.getString(withKey: UserDefaultsEnum.email.rawValue)!
         // Do any additional setup after loading the view.
     }
     

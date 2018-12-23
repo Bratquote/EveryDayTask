@@ -9,12 +9,11 @@
 import Foundation
 
 
-struct UserInfo {
+struct UserInfo: Codable {
     var name: String
     var surname: String
     var email: String
     var phoneNumber: String?
-    var avatar: Data?
     var password: String //only for test, later must me removed
     
     

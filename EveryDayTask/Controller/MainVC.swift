@@ -9,10 +9,29 @@
 import UIKit
 
 class MainVC: UIViewController {
-
+    
+    var getRequests: GetRequests!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Kek")
+        
+        if !UserDefaultsPresenter.getBool(withKey: UserDefaultsEnum.isLogin.rawValue) {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "LoginID") as! LoginVC
+            self.present(newViewController, animated: true, completion: nil)
+        }
+        
+        getRequests = GetRequests()
+        var id = getRequests.userId(email: UserDefaultsPresenter.getString(withKey: UserDefaultsEnum.email.rawValue)!)
+        if let currentId = id {
+            if let user = getRequests.userInfo(userId: currentId) {
+                print(user.name)
+                UserDefaultsPresenter.setUser(user: user)
+            }
+            
+            
+            
+        }
         // Do any additional setup after loading the view.
     }
     
